@@ -20,7 +20,7 @@ class TestLoginPage(BaseTest):
         loginPage.log_into_the_page(TestData.EMAIL, TestData.PASSWORD)
         wait = WebDriverWait(self.driver, 10)
         wait.until(EC.url_to_be(TestData.HOME_URL))
-        assert_that(self.driver.current_url).is_equal_to(TestData.LOGIN_URL)
+        assert_that(self.driver.current_url).is_equal_to(TestData.HOME_URL)
 
     @allure.title('Login with valid data. Check if user icon tekst is correct')
     def test_correct_data_customer(self):
